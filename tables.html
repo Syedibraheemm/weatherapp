@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Tables</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="side-menu">
+            <div class="logo">Weather App</div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="tables.html" class="active">Tables</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" id="city-input" placeholder="Search for a city...">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div class="user-profile">
+                    <span class="user-icon">👤</span>
+                </div>
+            </header>
+
+            <!-- Loading Spinner -->
+            <div id="loader" class="loader-container">
+                <div class="loader"></div>
+            </div>
+
+            <div class="tables-container">
+                <div class="table-section">
+                    <h2>Weather Forecast Data</h2>
+                    <div class="table-wrapper">
+                        <table id="weather-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Temperature</th>
+                                    <th>Weather</th>
+                                    <th>Humidity</th>
+                                    <th>Wind Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody id="weather-data">
+                                <!-- Table data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be added by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="chat-section">
+                    <h2>Weather Assistant</h2>
+                    <div class="chatbot-container">
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Chat messages will appear here -->
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="chat-input" placeholder="Ask about weather...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="tables.js"></script>
+</body>
+</html>
